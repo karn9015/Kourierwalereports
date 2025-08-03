@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Attendance & Report System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="card">
+    <h1>Login</h1>
+    <input type="text" id="username" placeholder="Username" />
+    <input type="password" id="password" placeholder="Password" />
+    <button onclick="login()">Login</button>
+  </div>
+
+  <div id="reminderBox" class="reminder hidden"></div>
+
+  <div id="userPanel" class="card hidden">
+    <h2>User Dashboard</h2>
+    <p id="date"></p>
+    <input type="number" id="confirmed" placeholder="Confirmed Calls" />
+    <input type="number" id="connected" placeholder="Connected Calls" />
+    <input type="number" id="total" placeholder="Total Calls" />
+    <button onclick="submitReport()">Submit Report</button>
+    <p id="reportStatus"></p>
+  </div>
+
+  <div id="adminPanel" class="card hidden">
+    <h2>Admin Dashboard</h2>
+    <input type="text" id="newUser" placeholder="New Username" />
+    <input type="text" id="newPass" placeholder="New Password" />
+    <button onclick="createUser()">Create User</button>
+    <input type="date" id="reportDate" />
+    <button onclick="viewReports()">View Reports</button>
+    <button onclick="exportToCSV()">Export CSV</button>
+    <div id="reports"></div>
+    <input type="text" id="reminder" placeholder="Set Reminder" />
+    <button onclick="setReminder()">Set Reminder</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
